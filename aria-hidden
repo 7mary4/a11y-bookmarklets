@@ -1,0 +1,11 @@
+<!-- The following link will force hidden elements to use display:block and visibility:visible. This helps if you have hidden elements that use aria-hidden.-->
+<a href="javascript:(function(c){var%20a='[aria-hidden]{background:#FBF8A1;display:block!important;visibility:visible!important;}[aria-hidden]:before{content:attr(aria-hidden);color:red;font-weight:bold;display:inline-block;}',b=c.getElementById('a11y-css-force-highlight-hidden');if(b){b.disabled=!b.disabled;}else{b=c.createElement('style');b.id='a11y-css-force-highlight-hidden';b.type='text/css';if(b.styleSheet){b.styleSheet.cssText=a;}else{b.appendChild(c.createTextNode(a));}c.getElementsByTagName('head')[0].appendChild(b);}})(document);//%20JavaScript%20Document">display and highlight aria-hidden elements</a>
+<!-- The following link does not force the element to be displayed and is good for making sure you don't have a visible element that is hidden -->
+<a href="javascript:(function(c){var%20a='[aria-hidden]{background:#FBF8A1;}[aria-hidden]:before{content:attr(aria-hidden);color:red;font-weight:bold;display:inline-block;}',b=c.getElementById('a11y-css-highlight-hidden');if(b){b.disabled=!b.disabled;}else{b=c.createElement('style');b.id='a11y-css-highlight-hidden';b.type='text/css';if(b.styleSheet){b.styleSheet.cssText=a;}else{b.appendChild(c.createTextNode(a));}c.getElementsByTagName('head')[0].appendChild(b);}})(document);//%20JavaScript%20Document">highlight aria-hidden elements</a>
+
+
+<h3 aria-hidden="false">Test elements</h3><ul>
+<li>This link has aria-hidden="true": <a href="http://last-child.com" aria-hidden="true">Ted's coding site</a></li>
+<li>The following is a hidden link with aria-hidden="true": <a href="http://brave.com" style="display:none" aria-hidden="true">Brave web browser</a></li>
+<li>This is a button with aria-label and a span with aria-hidden="true"><button  aria-label="Close"><span aria-hidden="true">X</span></button></li>
+</ul>
