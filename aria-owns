@@ -1,0 +1,13 @@
+<!-- The following link will highlight elements with aria-owns. Use this to find improper uses-->
+<a href="javascript:(function(c){var%20a='[aria-owns]{background:#FBF8A1}[aria-owns]:before{content:attr(aria-owns);color:red;font-weight:bold;display:inline-block;}',b=c.getElementById('a11y-css-highlight-aria-owns');if(b){b.disabled=!b.disabled;}else{b=c.createElement('style');b.id='a11y-css-highlight-aria-owns';b.type='text/css';if(b.styleSheet){b.styleSheet.cssText=a;}else{b.appendChild(c.createTextNode(a));}c.getElementsByTagName('head')[0].appendChild(b);}})(document);//%20JavaScript%20Document">highlight elements with aria-owns</a>
+
+
+<h3 >Test elements</h3>
+<ul >
+<li>this list item is inside the ul</li>
+<li aria-owns="content"></li>
+</ul>
+
+<div id="content">
+this content is in a div and will be included in the empty   list item via aria-owns
+</div>
